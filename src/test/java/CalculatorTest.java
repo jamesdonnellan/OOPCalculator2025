@@ -48,7 +48,7 @@ public class CalculatorTest
     @Test
     void testDivisionFailure()
     {
-        assertThrows(IllegalArgumentException.class,  () -> {myCalc.subtract(Integer.MIN_VALUE, 7);});
+        assertThrows(ArithmeticException.class,  () -> {myCalc.division(6,0);});
     }
 
 

@@ -24,9 +24,9 @@ public class Calculator
     public int division(int firstNum, int secondNum)
     {
         long result = (long) firstNum / secondNum;
-        if(result < Integer.MIN_VALUE)
+        if(secondNum == 0)
         {
-            throw new IllegalArgumentException("This value is too small");
+            throw new ArithmeticException("Cannot Divide by 0");
         }
         return(int) result;
     }
