@@ -26,4 +26,16 @@ public class CalculatorTest
         assertThrows(IllegalArgumentException.class,  () -> {myCalc.add(Integer.MAX_VALUE, 2);});
     }
 
+
+    @Test
+    void testSubtractSuccess()
+    {
+        assertEquals(4, myCalc.subtract(8,4));
+    }
+
+    @Test
+    void testSubtractFailure()
+    {
+        assertThrows(IllegalStateException.class,  () -> {myCalc.subtract(Integer.MIN_VALUE, 1);});
+    }
 }
