@@ -51,5 +51,15 @@ public class CalculatorTest
         assertThrows(ArithmeticException.class,  () -> {myCalc.division(6,0);});
     }
 
+    @Test
+    void testMultiplySuccess()
+    {
+        assertEquals(9, myCalc.multiply(3,3));
+    }
 
+    @Test
+    void testMultiplyFailure()
+    {
+        assertThrows(UnsupportedOperationException.class,  () -> {myCalc.multiply(Integer.MAX_VALUE, 2);});
+    }
 }
