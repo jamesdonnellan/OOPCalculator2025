@@ -58,7 +58,7 @@ public class CalculatorTest
     }
 
     @Test
-    void testMultiplyFailure()
+    void testMultiplyFailure() // multiplication feature //
     {
         assertThrows(UnsupportedOperationException.class,  () -> {
             myCalc.multiply(Integer.MAX_VALUE, 2);});
