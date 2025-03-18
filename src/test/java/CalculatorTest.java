@@ -36,6 +36,20 @@ public class CalculatorTest
     @Test
     void testSubtractFailure()
     {
-        assertThrows(IllegalStateException.class,  () -> {myCalc.subtract(Integer.MIN_VALUE, 1);});
+        assertThrows(IllegalArgumentException.class,  () -> {myCalc.subtract(Integer.MIN_VALUE, 1);});
     }
+
+    @Test
+    void testDivisionSuccess()
+    {
+        assertEquals(3, myCalc.division(6,2));
+    }
+
+    @Test
+    void testDivisionFailure()
+    {
+        assertThrows(IllegalArgumentException.class,  () -> {myCalc.subtract(Integer.MIN_VALUE, 7);});
+    }
+
+
 }
